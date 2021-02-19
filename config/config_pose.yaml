@@ -1,5 +1,5 @@
-topic_camera: "/dope/webcam/image_raw"
-topic_camera_info: "/dope/webcam/camera_info"
+topic_camera: "/camera/color/image_raw" # "/dope/webcam/image_raw"
+topic_camera_info: "/camera/color/camera_info" #"/dope/webcam/camera_info"
 topic_publishing: "dope"
 input_is_rectified: True   # Whether the input image is rectified (strongly suggested!)
 downscale_height: 400      # if the input image is larger than this, scale it down to this pixel height
@@ -9,9 +9,9 @@ weights: {
     # "cracker":"package://dope/weights/cracker_60.pth",
     # "gelatin":"package://dope/weights/gelatin_60.pth",
     # "meat":"package://dope/weights/meat_20.pth",
-    # "mustard":"package://dope/weights/mustard_60.pth",
-    "soup":"package://dope/weights/soup_60.pth",
-    #"sugar":"package://dope/weights/sugar_60.pth",
+    "mustard":"package://dope/weights/mustard_60.pth",
+    # "soup":"package://dope/weights/soup_60.pth",
+    # "sugar":"package://dope/weights/sugar_60.pth",
     # "bleach":"package://dope/weights/bleach_28_dr.pth"
     
     # NEW OBJECTS - HOPE
