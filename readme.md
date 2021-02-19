@@ -1,3 +1,33 @@
+# DOPE for ROS
+This is a forked version of [DOPE](https://github.com/NVlabs/Deep_Object_Pose) for use in LASA. Always run using a docker container. 
+
+## Quick guide 
+1. **Download [the weights](https://drive.google.com/open?id=1DfoA3m_Bm0fW8tOWXGVxi4ETlLEAgmcg)** and save them to the `weights` folder, *i.e.*, `~/catkin_ws/src/dope/weights/`.
+2. **Build the docker image**
+   ```bash
+   cd docker
+   docker build -t nvidia-dope:noetic-v1 -f Dockerfile.noetic ..
+   ```
+3. **Run realsense camera**
+   ```bash
+   roslaunch realsense2_camera rs_camera.launch
+   ```
+4. **Run the docker image**
+   ```bash
+   cd docker
+   ./run_dope_docker.sh
+   ```
+5. **Start DOPE** (Inside the docker container)
+   ```bash
+   roslaunch dope dope.launch
+   ```
+
+## Demo
+![Demo with mustard bottle](Demo/mustard.gif "Demo with mustard bottle")
+
+-------------------------------------------
+(Original README from NVlabs)
+
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 ![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
 # Deep Object Pose Estimation - ROS Inference
